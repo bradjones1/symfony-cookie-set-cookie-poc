@@ -31,7 +31,6 @@ if (!$time = $session->get('requested')) {
 }
 $session->save();
 $response = new \Symfony\Component\HttpFoundation\Response("Time: $time, Session: $sessionName:$sessionId");
-$session = new \Symfony\Component\HttpFoundation\Session\Session($storage);
 $session->start();
 $response->send();
 $session->save();
